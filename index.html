@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="containerFluid">
-    <div class="navBar">
+<body>
+    <header class="navBar">
         <div class="navTop">
             <div class="logo">
                 <a href="./index.html"><img src="./assets/logos/logo-extendido.svg" alt="logo de arteHabitar"></a>
@@ -24,19 +24,28 @@
                 <ul>
                     <li>
                         <a href="./index.html">INICIO</a>
+                    </li>
+                    <li>
                         <a href="./pages/contacto.html">CONTACTO</a>
+                    </li>
+                    <li>
                         <a href="./pages/sobreMi.html">SOBRE MI</a>
+                    </li>
+                    <li>
                         <a href="./pages/catalogo.html">CATÁLOGO</a>
+                    </li>
+                    <li>
                         <a href="./pages/resena.html">RESEÑAS</a>
                     </li>
                 </ul>
             </nav>
         </div>
-    </div>
-    <div class="titulo">
+    </header>
+    <main class="inicio">
+        <div class="titulo">
             <h1>ARTE HABITAR</h1>
     </div>
-    <div class="grid-slider"> 
+    <div class="slider"> 
         <div id="homeSliderBanner" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#homeSliderBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -66,7 +75,7 @@
             </div>
         </div>
     </div>
-    <div class="grid-home-medio">
+    <div class="home-medio">
         <article class="middleBanner">
             <img src="./assets/img/productos/17.jpg" alt="Kit de obsequio">
             <p><strong>Kits personalizados para esa persona especial.</strong></p>
@@ -76,10 +85,11 @@
             <p><strong>Todo lo necesario para limpiar tu espacio.</strong><br>Elegí entre nuestros productos el que mejor<br> se adapte a tus necesidades</p>
         </article>
     </div>
-    <div class="grid-sec3">
+    <div class="sec3">
         <a href="./pages/catalogo.html"><img src="./assets/img/banners/bannerSahumador.jpg" alt="sahumadores"></a>
     </div>
-    <div class="grid-footer">
+    </main>    
+    <footer class="footer">
         <div class="footerLeft">
             <div class="isotipoF">
                 <a href="#header"><img src="./assets/logos/isotipo.svg" alt="isotipo"></a>
@@ -107,7 +117,7 @@
             <a href="https://workspace.google.com/intl/es-419/gmail/" target="_blank"><img src="./assets/icons/mail-outline (1).svg" alt="mail"></a>
             </div>            
         </div>
-    </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>

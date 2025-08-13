@@ -6,31 +6,29 @@
 }
 
 body{
+    width: 100%;
     font-family: "Poppins", sans-serif;
-    position: absolute;
 }
 /* HEADER */
 
 .navBar{
     width: 100%;
     height: 200px;
-    position: sticky;
+    /* position: sticky; */
     top: 0px;
-    padding-right: 24px;
     display: flex;
     flex-direction: column;
 }
 .navTop{
     height: 200px;
     width: 100%;
-    padding: 24px;
+    /* padding: 24px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-image: url(../assets/img/fondo-1.jpg);
     background-repeat: none;
     background-size: cover;
-    /*background-color: rgb(182, 193, 162);*/
 }
 .navTop a img{
     height: 100px;
@@ -61,8 +59,8 @@ body{
     padding: 8px;
 }
 .menu ul{
-    list-style: none;
     display: flex;
+    padding-right: 16px;
     }
 .menu ul li{
     list-style: none;
@@ -232,17 +230,17 @@ form textarea{
     font-weight: 400;
 }
 .todosLosProductos{
-    padding-left: 80px;
+    padding-right: 24px;
     /* no queda bien distribuida la grilla */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:  
-    "producto1" "producto2" "producto3" "producto4"
-    "producto5" "producto6" "producto7" "producto8"
-    "producto9";
-    row-gap: 24px;
-    column-gap: 24px;
+    "producto1 producto2 producto3"
+    "producto4 producto5 producto6"
+    "producto7 producto8 producto9";
+    row-gap: 16px;
+    column-gap: 16px;
     align-content: center;
     justify-content: center;
 }
@@ -258,7 +256,7 @@ form textarea{
 .producto4{
     grid-area: producto4;
 }
-.porducto5{
+.producto5{
     grid-area: producto5;
 }
 .producto6{
@@ -280,7 +278,7 @@ form textarea{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-#prod{
+.prod{
     width: 250px;
     height: 360px;
     border-style: solid;
@@ -332,13 +330,13 @@ form textarea{
 /* MAIN RESEÑAS */
 
 .mainResenas{
-    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:  
-    "cliente1" "cliente2" "cliente3"
-    "cliente4" "cliente5" "cliente6";
+    "cliente1 cliente2 cliente3"
+    "cliente4 cliente5 cliente6";
     row-gap: 24px;
     align-content: center;
     align-items: center;
@@ -396,18 +394,17 @@ footer{
     height: 150px;
     width: 100%;
     display: flex;
-    /*background-color: rgb(182, 193, 162);*/
     background-image: url(../assets/img/banners/fondo-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
     justify-content: space-between;
     align-content: center;
-    position: relative;
-    bottom: 0px;
+    /* position: relative;
+    bottom: 0px; */
     margin-top: 48px;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 48px;
+    padding-right: 48px;
 }
 .footerLeft{
     display: flex;
@@ -427,6 +424,14 @@ footer{
     font-family: "Poppins", sans-serif;
     font-size: 9px;
     font-weight: 300;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.menuF ul li{
+    list-style: none;
+    
 }
 .redes{
     height:48px;
@@ -453,54 +458,22 @@ footer{
     margin: 8px;
 }
 
-
-/*INDEX GRID*/
-
-.containerFluid{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    display: grid;
-    grid-template-columns: 1, 1fr;
-    grid-template-rows: 200px 50px 450px 450px 450px 150px;
-    grid-template-areas: 
-    "navBar"
-    "titulo"
-    "grid-slider"
-    "grid-home-medio"
-    "grid-sec3"
-    "grid-footer";
-    gap: 1.5rem;
-}
-
-.navBar{
-    position: sticky;
-    top: 0px;
-    width: 100%;
-    grid-area: navBar;
-    padding-right: 24px;
-}
-.logo a img{
-    height: 100px;
-    width: auto;
-}
-.menu{
+/*INDEX*/
+header{
     width: 100%;
 }
-.menu nav a{
-    font-family: "Poppins", sans-serif;
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
-    padding: 8px;
+.inicio{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 .titulo{
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: center;
-    grid-area: titulo;
+
 }
 .titulo h1{
     font-family: "Poppins", sans-serif;
@@ -510,97 +483,57 @@ footer{
     font-weight: 300;
     color: rgb(118, 144, 70)
 }
-.grid-slider{
-    position: absolute;
+.slider{
     width: 100%;
     height: 450px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    grid-area: grid-slider;    
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 #homeSliderBanner{
     height: 400px;
-    width: auto;
+    width: 100%;
 }
-.grid-home-medio{
+.home-medio{
     width: 100%;
     height: 450px;
     display: flex;
     justify-content: space-around;
     justify-content: center;
     align-items: center;
-    grid-area: grid-home-medio;
 }
 .middleBanner{
-    width: 50%;
+    width: 45%;
     height: 450px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    padding: 8px;
 }
 .middleBanner img{
-    height: 90%;
+    height: 400px;
     width: auto;
-    border: 0px;
     border-radius: 25px;
-    padding: 24px;
+    padding: 8px;
 }
 .middleBanner p{
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     color: rgb(75, 113, 4);
     padding-left: 16px;
 }
-.grid-sec3{
+.sec3{
     width: 100%;
     height: 450px;
-    grid-area: grid-sec3;
     padding: 24px;
 }
-.grid-sec3 a{
+.sec3 a{
     align-items: center;
     align-content: center;
 }
-.grid-sec3 img{
+.sec3 img{
     width: 100%;
     border: 0px;
     border-radius: 25px;
-}
-
-.grid-footer{
-    height: 150px;
-    width: 100%;
-    display: flex;
-    /*background-color: rgb(182, 193, 162);*/
-    background-image: url(../assets/img/banners/fondo-2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    position: bottom;
-    bottom: 0px;
-    margin-top: 48px;
-    padding-left: 48px;
-    padding-right: 48px;
-    grid-area: grid-footer;
-}
-.menuF ul li{
-    list-style: none;
-}
-.menuF a{
-    display: flex;
-    flex-direction: column;
-    font-family: "Poppins", sans-serif;
-    text-decoration: none;
-    color: black;
-    font-weight: 300;
-    font-size: 9px;
 }
