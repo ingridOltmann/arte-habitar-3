@@ -12,7 +12,6 @@ body{
 /* HEADER */
 
 .navBar{
-    width: 100%;
     height: 200px;
     /* position: sticky; */
     top: 0px;
@@ -21,8 +20,7 @@ body{
 }
 .navTop{
     height: 200px;
-    width: 100%;
-    /* padding: 24px; */
+    padding: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,7 +44,6 @@ body{
     margin: 16px;
 }
 .menu{
-    width: 100%;
     display: flex;
     flex-direction: row-reverse;
     background-color: white;
@@ -70,7 +67,6 @@ body{
     color: black;
 }
 h1{
-    width: 100%;
     height: 50px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -135,9 +131,6 @@ h1{
 
 /* MAIN CONTACTO*/
 
-.mainContacto{
-    width: 100%;
-}
 form{
     display: flex;
     flex-direction: column;
@@ -159,8 +152,8 @@ form input{
     border-radius: 25px;
 }
 form textarea{
-    margin-top: 16px;  
-    padding: 16px;  
+    margin-top: 16px;
+    padding: 16px;
     width: 40%;
     height: 300px;
     font-size: 16px;
@@ -174,9 +167,6 @@ form textarea{
 
 
 /* MAIN CATÁLOGO */
-.mainCatalogo{
-    width: 100%;
-}
 .dispCatalogo{
     display: flex;
     justify-content: space-between;
@@ -200,11 +190,11 @@ form textarea{
     font-weight: 400;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-} 
+}
 .filtro img{
     height: 24px;
     width: 24x;
-    
+
 }
 .opciones{
     background-color: rgba(182, 193, 162, 0.589);
@@ -231,11 +221,10 @@ form textarea{
 }
 .todosLosProductos{
     padding-right: 24px;
-    /* no queda bien distribuida la grilla */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:  
+    grid-template-areas:
     "producto1 producto2 producto3"
     "producto4 producto5 producto6"
     "producto7 producto8 producto9";
@@ -244,7 +233,7 @@ form textarea{
     align-content: center;
     justify-content: center;
 }
-.producto1{ 
+.producto1{
     grid-area: producto1;
 }
 .producto2{
@@ -330,11 +319,11 @@ form textarea{
 /* MAIN RESEÑAS */
 
 .mainResenas{
-    width: 100%;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:  
+    grid-template-areas:
     "cliente1 cliente2 cliente3"
     "cliente4 cliente5 cliente6";
     row-gap: 24px;
@@ -363,7 +352,6 @@ form textarea{
     grid-area: cliente6;
 }
 .Resena{
-    background-color: white;
     padding: 16px;
     width: 250px;
     height: 300px;
@@ -392,7 +380,6 @@ form textarea{
 
 footer{
     height: 150px;
-    width: 100%;
     display: flex;
     background-image: url(../assets/img/banners/fondo-2.jpg);
     background-repeat: no-repeat;
@@ -403,8 +390,8 @@ footer{
     /* position: relative;
     bottom: 0px; */
     margin-top: 48px;
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 .footerLeft{
     display: flex;
@@ -421,7 +408,6 @@ footer{
     flex-direction: column;
 }
 .menuF a{
-    font-family: "Poppins", sans-serif;
     font-size: 9px;
     font-weight: 300;
     text-decoration: none;
@@ -431,7 +417,7 @@ footer{
 }
 .menuF ul li{
     list-style: none;
-    
+
 }
 .redes{
     height:48px;
@@ -458,43 +444,12 @@ footer{
     margin: 8px;
 }
 
-/*INDEX*/
-header{
-    width: 100%;
-}
-.inicio{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-.titulo{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-
-}
-.titulo h1{
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 300;
-    color: rgb(118, 144, 70)
-}
 .slider{
-    width: 100%;
-    height: 450px;
+    /* height: 450px; */
     padding-left: 24px;
     padding-right: 24px;
 }
-#homeSliderBanner{
-    height: 400px;
-    width: 100%;
-}
 .home-medio{
-    width: 100%;
     height: 450px;
     display: flex;
     justify-content: space-around;
@@ -524,16 +479,48 @@ header{
     padding-left: 16px;
 }
 .sec3{
-    width: 100%;
     height: 450px;
     padding: 24px;
-}
-.sec3 a{
-    align-items: center;
-    align-content: center;
 }
 .sec3 img{
     width: 100%;
     border: 0px;
     border-radius: 25px;
+}
+/* MEDIA QUERIES */
+
+@media (max-width:767px){
+    .slider, .logo, .menu, .navR, .sec3{
+        display: none;
+    }
+    header, main, footer{
+        width: 100%;
+    }
+    .home-medio{
+        display: flex;
+        flex-direction: column;
+    }
+    .middleBanner{
+        width: 100%;
+    }
+    .navBar, footer{
+        height: 100px;
+    }
+    .slider2, .sec3Movil{
+        height: 300px;
+        width: auto;
+    }
+    .sec3Movil a img{
+        height: 100%;
+        width: auto%;
+    }
+    #homeSliderBanner{
+        height: 100%;
+        width: auto;
+    }
+}
+@media (min-width: 768px){
+    .slider2, .isotipoH, .sec3Movil{
+        display: none;
+    }
 }
