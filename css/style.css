@@ -302,6 +302,8 @@ form textarea{
     align-items: center;
     margin: 8px;
     padding: 8px;
+    text-decoration: none;
+    color: darkgreen;
 }
 .agregarAlaCesta{
     width:250px;
@@ -313,6 +315,8 @@ form textarea{
     border-color: darkgreen;
     background-color: white;
     margin: 8px;
+    text-decoration: none;
+    color: darkgreen;
 }
 
 
@@ -493,34 +497,51 @@ footer{
     .slider, .logo, .menu, .navR, .sec3{
         display: none;
     }
-    header, main, footer{
-        width: 100%;
-    }
-    .home-medio{
+    body{
+        height: auto;
         display: flex;
         flex-direction: column;
     }
-    .middleBanner{
+    header, main, footer{
         width: 100%;
     }
     .navBar, footer{
         height: 100px;
     }
-    .slider2, .sec3Movil{
+    .isotipoH a img{
+        height: 48px;
+    }
+    .titulo{
+        height: 25px;
+        font-size: 16px;
+    }
+    .sec3Movil{
         height: 300px;
+        width: 100%;
+    }
+    #homeSliderBanner2{
+        width: 100%;
+    }
+    .home-medio{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .middleBanner{
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    .middleBanner img{
         width: auto;
+        height: 200px;
     }
     .sec3Movil a img{
-        height: 100%;
-        width: auto%;
-    }
-    #homeSliderBanner{
-        height: 100%;
-        width: auto;
+        width: 100%;
     }
 }
 @media (min-width: 768px){
-    .slider2, .isotipoH, .sec3Movil{
+    #homeSliderBanner2, .isotipoH, .sec3Movil{
         display: none;
     }
 }
