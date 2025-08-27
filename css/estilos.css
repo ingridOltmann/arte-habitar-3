@@ -405,14 +405,16 @@ footer .redes div a img {
   header, main, footer {
     width: 100%;
   }
-  .navBar, footer {
+  .navBar {
     height: 100px;
   }
   .isotipoH a img {
     height: 36px;
   }
-  .menuF {
-    display: none;
+  footer {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
   }
   h1 {
     height: 25px;
