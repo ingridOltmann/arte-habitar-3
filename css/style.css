@@ -38,7 +38,7 @@ body{
     justify-content: flex-end;
     align-items: center;
 }
-.navR i img{
+.navR a img{
     height: 24px;
     width: 24px;
     margin: 16px;
@@ -462,7 +462,7 @@ footer{
 }
 .middleBanner{
     width: 45%;
-    height: 450px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -498,7 +498,7 @@ footer{
         display: none;
     }
     body{
-        height: auto;
+        /* height: auto; */
         display: flex;
         flex-direction: column;
     }
@@ -509,9 +509,9 @@ footer{
         height: 100px;
     }
     .isotipoH a img{
-        height: 48px;
+        height: 36px;
     }
-    .titulo{
+    .titulo h1{
         height: 25px;
         font-size: 16px;
     }

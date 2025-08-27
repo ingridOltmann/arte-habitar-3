@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// VARIABLES
+$color-info: rgb(75, 113, 4);
+$color-border-card: rgb(1, 86, 1);
+$color-info-darkmode: rgba(237, 255, 204, 0.936);
+$tipografia-ppal: "Poppins", sans-serif;
+
+// MIXIN
+@mixin miLista ($color, $text-decoration, $padding){
+    color: black;
+    text-decoration: none;
+    padding: 8px;
+}
+@mixin bordeCard ($border-style, $border-width, $border-radius){
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+@mixin flexBasico ($display, $justify-content, $align-items){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// EXTEND
+
+
+ul{
+    list-style: none;
+}
+li > a {
+    @include miLista(black, none, 8px)
+}
+body{
+    width: 100%;
+    font-family: $tipografia-ppal;
+}
+footer, .navTop{
+    padding: 24px;
+}
+main{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 32px;
+}
+h1{
+    height: 50px;
+    font-family: $tipografia-ppal;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+    color: rgb(118, 144, 70);
+}
+h2{
+    font-family: $tipografia-ppal;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: $color-info;
+}
+
+header{
+    height: 200px;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    .navTop{
+        height: 200px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        background-image: url(../assets/img/fondo-1.jpg);
+        background-repeat: none;
+        background-size: cover;
+        justify-content: space-between;
+        .logo{
+            a{
+                img{
+            height: 100px;
+            width: auto;
+        }
+            } 
+        } 
+        .navR{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            a{
+                img{
+                    height: 24px;
+                    width: 24px;
+                    margin: 16px;
+                }
+            }
+        }
+    }
+    .menu{
+        background-color: white;
+        padding: 16px;
+        nav{
+            ul{
+                display: flex;
+                font-size: 12px;
+                justify-content: end;
+                li{
+                    @include miLista( black, none, 8px)
+                }
+            }
+        }
+    }
+}
+
+
+footer{
+    height: 150px;
+    display: flex;
+    background-image: url(../assets/img/banners/fondo-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // bottom: 0px;
+    margin-top: 48px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    .footerLeft{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .isotipoF a img{
+            height: 48px;
+            width: auto;
+            margin: 24px;
+        }
+        .menuF{
+            ul{
+                display: flex;
+                a{                
+                    font-size: 12px;
+                    font-weight: 400;
+                    @include miLista(black, none, 8px)
+                }
+            }
+            
+        }
+    }
+    .redes{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        div{
+            a{
+                img{
+                    height: 24px;
+                    width: 24px;
+                    margin: 8px;
+                }
+            }
+        }
+    }
+}
+.home-medio{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 24px;
+    .middleBanner{
+        width: 45%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        justify-content: center;
+        img{
+            height: 300px;
+            width: auto;
+            padding: 16px;
+        }
+        p{
+            font-size: 12px;
+            text-align: center;
+            color: $color-info;
+        }
+    }
+}
+.sec3{
+    padding-top: 24px;
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+    }
+}
+.mainResenas{
+    display: grid;
+    grid-template-areas:
+    "cliente1 cliente2 cliente3"
+    "cliente4 cliente5 cliente6";
+    row-gap: 24px;
+    column-gap: 24px;
+    justify-content: center;
+    .cliente1{
+        grid-area: cliente1;
+    }
+    .cliente2{
+        grid-area: cliente2;
+    }
+    .cliente3{
+        grid-area: cliente3;
+    }
+    .cliente4{
+        grid-area: cliente4;
+    }
+    .cliente5{
+        grid-area: cliente5;
+    }
+    .cliente6{
+        grid-area: cliente6;
+    }
+    .Resena{
+        padding: 16px;
+        width: 300px;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        @include bordeCard(solid, 1px, 15px);
+        border-color: $color-border-card;
+        align-content: center;
+        align-items: center;
+        img{
+            width: 50px;
+            height: 50px;
+            margin:8px;
+        }
+        p{
+            font-size: 12px;
+            text-align: center;
+            margin: 8px;
+            color: $color-info;
+        }
+    }
+}
+.dispCatalogo{
+    display: flex;
+    padding-top: 24px;
+    .catalogo{
+        display: flex;
+        flex-direction: column;
+        .categorias{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            width: 200px;
+            background-color:rgb(182, 193, 162);
+            font-size: 12px;
+            font-weight: 400;
+            color: $color-info;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            div{
+                img{
+                    height: 24px;
+                    width: 24px;
+                }
+            }
+        }
+        .opciones{
+            background-color: rgba(182, 193, 162, 0.589);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            ul{
+                padding-bottom: 16px;
+                li{
+                    a{
+                        color: $color-info;
+                        font-size: 12px;
+                        font-weight: 400;
+                        padding-left: 24px;
+                    }
+                }
+            }
+        }
+    }    
+}
+.todosLosProductos{
+    display: grid;
+    grid-template-areas:
+    "producto1 producto2 producto3"
+    "producto4 producto5 producto6"
+    "producto7 producto8 producto9";
+    row-gap: 16px;
+    column-gap: 16px;
+    padding-left: 32px;
+    .producto1{
+        grid-area: producto1;
+    }
+    .producto2{
+        grid-area: producto2;
+    }
+    .producto3{
+        grid-area: producto3;
+    }
+    .producto4{
+        grid-area: producto4;
+    }
+    .producto5{
+        grid-area: producto5;
+    }
+    .producto6{
+        grid-area: producto6;
+    }
+    .producto7{
+        grid-area: producto7;
+    }
+    .producto8{
+        grid-area: producto8;
+    }
+    .producto9{
+        grid-area: producto9;
+    }
+    .prod{
+        width: 250px;
+        height: 360px;
+        @include bordeCard(solid, 1px, 15px);
+        border-color: $color-border-card;
+        display: flex;
+        flex-direction: column;
+        img{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;    
+        }
+        p{
+            font-size: 12px;
+            margin: 8px;
+            color: $color-info;
+        }
+    }
+}
+.mainContacto{
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div{
+            @include flexBasico(flex, center, center);
+            width: 50%;
+            label{
+            font-size: 12px;
+            font-family: $tipografia-ppal;
+            color: $color-info;
+            padding-right: 16px;
+            }
+            input{
+                height: 30px;
+                width: 80%;
+                @include bordeCard(solid, 1px, 15px);
+                border-color: $color-border-card;
+            }
+        }
+        textarea{
+            margin-top: 16px;
+            padding: 16px;
+            width: 50%;
+            height: 200px;
+            font-size: 16px;
+            font-family: $tipografia-ppal;
+            @include bordeCard(solid, 1px, 15px);
+            color: $color-info;
+            border-color: $color-border-card;
+        }
+    }
+}
+.nosotros{
+    @include flexBasico(flex, center, center);
+    flex-direction: column;
+    .laCreadora{    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 30%;
+            height: auto;
+            padding: 24px;
+        }
+    }
+    .elComienzo{   
+            @include flexBasico(flex, center, center);
+        flex-direction: row-reverse;
+        img{
+            width: 30%;
+            height: auto;
+            padding: 24px;
+        }
+    }
+}
+.info{
+    width: 40%;
+    p{
+        font-size: 12px;
+        font-weight: 300px;
+        color: $color-info;
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:767px){
+    .slider, .logo, .menu, .navR, .sec3{
+        display: none;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    header, main, footer{
+        width: 100%;
+    }
+    .navBar, footer{
+        height: 100px;
+    }
+    .isotipoH a img{
+        height: 36px;
+    }
+    .menuF{
+        display: none;
+    }
+    h1{
+        height: 25px;
+        font-size: 16px;
+    }
+    .sec3Movil{
+        height: 300px;
+        width: 100%;
+    }
+    #homeSliderBanner2{
+        width: 100%;
+    }
+    .home-medio{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .middleBanner{
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    .middleBanner img{
+        width: auto;
+        height: 200px;
+    }
+    .sec3Movil a img{
+        width: 100%;
+    }
+    .mainResenas{
+        display: grid;
+        grid-template-areas: 
+        "cliente1"
+        "cliente2"
+        "cliente3"
+        "cliente4"
+        "cliente5"
+        "cliente6";
+    }
+    .dispCatalogo{
+        display: none;
+    }
+    .todosLosProductos{
+        display: grid;
+        grid-template-areas: 
+        "producto1"
+        "producto2"
+        "producto3"
+        "producto4"
+        "producto5"
+        "producto6"
+        "producto7"
+        "producto8"
+        "producto9";        
+    }
+}
+@media (min-width: 768px){
+    #homeSliderBanner2, .isotipoH, .sec3Movil{
+        display: none;
+    }
+}
