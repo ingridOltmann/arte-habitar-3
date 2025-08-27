@@ -412,7 +412,7 @@ footer .redes div a img {
     height: 36px;
   }
   footer {
-    height: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
   }
@@ -449,9 +449,14 @@ footer .redes div a img {
     grid-template-areas: "cliente1" "cliente2" "cliente3" "cliente4" "cliente5" "cliente6";
   }
   .dispCatalogo {
+    display: flex;
+    flex-direction: column;
+  }
+  .dispCatalogo .catalogo {
     display: none;
   }
   .todosLosProductos {
+    justify-content: center;
     display: grid;
     grid-template-areas: "producto1" "producto2" "producto3" "producto4" "producto5" "producto6" "producto7" "producto8" "producto9";
   }
