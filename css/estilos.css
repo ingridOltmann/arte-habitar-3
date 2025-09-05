@@ -60,11 +60,12 @@ header .navTop {
   height: 200px;
   padding: 16px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   background-image: url(../assets/img/fondo-1.jpg);
   background-repeat: none;
   background-size: cover;
-  justify-content: space-between;
 }
 header .navTop .logo a img {
   height: 100px;
@@ -72,6 +73,7 @@ header .navTop .logo a img {
 }
 header .navTop .navR {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
@@ -98,17 +100,17 @@ header .menu nav ul li {
 footer {
   height: 150px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-image: url(../assets/img/banners/fondo-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 48px;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
 }
 footer .footerLeft {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -129,8 +131,9 @@ footer .footerLeft .menuF ul a {
 }
 footer .redes {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 footer .redes div a img {
   height: 24px;
@@ -140,6 +143,7 @@ footer .redes div a img {
 
 .home-medio {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding-top: 24px;
@@ -148,9 +152,9 @@ footer .redes div a img {
   width: 45%;
   height: auto;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  justify-content: center;
+  align-items: center;
 }
 .home-medio .middleBanner img {
   height: 300px;
@@ -324,6 +328,7 @@ footer .redes div a img {
 }
 .mainContacto form div {
   display: flex;
+  flex-direction: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
@@ -358,12 +363,13 @@ footer .redes div a img {
 
 .nosotros {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .nosotros .laCreadora {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -374,9 +380,9 @@ footer .redes div a img {
 }
 .nosotros .elComienzo {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  flex-direction: row-reverse;
 }
 .nosotros .elComienzo img {
   width: 30%;

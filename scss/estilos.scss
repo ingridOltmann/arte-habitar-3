@@ -21,10 +21,11 @@ $tipografia-ppal: "Poppins", sans-serif;
     border-width: 1px;
     border-radius: 15px;
 }
-@mixin flexBasico ($display, $justify-content, $align-items){
+@mixin flexBasico ($direction, $justify, $align){
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
 }
 
 // EXTEND
@@ -75,24 +76,20 @@ header{
     .navTop{
         height: 200px;
         padding: 16px;
-        display: flex;
-        align-items: center;
+        @include flexBasico(row, space-between, center);
         background-image: url(../assets/img/fondo-1.jpg);
         background-repeat: none;
         background-size: cover;
-        justify-content: space-between;
         .logo{
             a{
                 img{
-            height: 100px;
-            width: auto;
-        }
+                    height: 100px;
+                    width: auto;
+                }
             } 
         } 
         .navR{
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            @include flexBasico(row, flex-end, center);
             a{
                 img{
                     height: 24px;
@@ -121,20 +118,13 @@ header{
 
 footer{
     height: 150px;
-    display: flex;
+    @include flexBasico(row, space-between, center);
     background-image: url(../assets/img/banners/fondo-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    // bottom: 0px;
     margin-top: 48px;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
     .footerLeft{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexBasico(row, center, center);
         .isotipoF a img{
             height: 48px;
             width: auto;
@@ -146,16 +136,14 @@ footer{
                 a{                
                     font-size: 12px;
                     font-weight: 400;
-                    @include miLista(black, none, 8px)
+                    @include miLista(black, none, 8px);
                 }
             }
             
         }
     }
     .redes{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        @include flexBasico(row, space-around, center);
         div{
             a{
                 img{
@@ -168,17 +156,12 @@ footer{
     }
 }
 .home-medio{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flexBasico(row, space-around, center);
     padding-top: 24px;
     .middleBanner{
         width: 45%;
         height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        justify-content: center;
+        @include flexBasico(row, space-between, center);
         img{
             height: 300px;
             width: auto;
@@ -255,10 +238,7 @@ footer{
         display: flex;
         flex-direction: column;
         .categorias{
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            align-items: center;
+            @include flexBasico(row-reverse, space-between, center);
             padding: 16px;
             width: 200px;
             background-color:rgb(182, 193, 162);
@@ -381,12 +361,9 @@ footer{
     }
 }
 .nosotros{
-    @include flexBasico(flex, center, center);
-    flex-direction: column;
-    .laCreadora{    
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @include flexBasico(column, center, center);
+    .laCreadora{  
+        @include flexBasico(row, center, center);  
         img{
             width: 30%;
             height: auto;
@@ -394,8 +371,7 @@ footer{
         }
     }
     .elComienzo{   
-            @include flexBasico(flex, center, center);
-        flex-direction: row-reverse;
+            @include flexBasico(row-reverse, center, center);
         img{
             width: 30%;
             height: auto;
