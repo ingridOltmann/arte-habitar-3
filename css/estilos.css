@@ -82,6 +82,11 @@ header .navTop .navR a img {
   width: 24px;
   margin: 16px;
 }
+header .navTop .navR .dropdown ul li a {
+  font-size: 12px;
+  font-weight: 300;
+  color: black;
+}
 header .menu {
   background-color: white;
   padding: 16px;
@@ -401,7 +406,7 @@ footer .redes div a img {
 
 /* MEDIA QUERIES */
 @media (max-width: 767px) {
-  .slider, .logo, .menu, .navR, .sec3 {
+  .slider, .logo, .menu, .fa-regular, .sec3 {
     display: none;
   }
   body {
@@ -419,6 +424,10 @@ footer .redes div a img {
   }
   footer {
     height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .footerLeft {
     display: flex;
     flex-direction: column;
   }
@@ -469,6 +478,9 @@ footer .redes div a img {
 }
 @media (min-width: 768px) {
   #homeSliderBanner2, .isotipoH, .sec3Movil {
+    display: none;
+  }
+  .dropdown {
     display: none;
   }
 }

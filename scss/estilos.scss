@@ -10,6 +10,7 @@ $color-border-card: rgb(1, 86, 1);
 $color-info-darkmode: rgba(237, 255, 204, 0.936);
 $tipografia-ppal: "Poppins", sans-serif;
 
+
 // MIXIN
 @mixin miLista ($color, $text-decoration, $padding){
     color: black;
@@ -26,6 +27,11 @@ $tipografia-ppal: "Poppins", sans-serif;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+}
+@mixin tipografiaMenu ($font-size, $font-weight, $color,){
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
 }
 
 // EXTEND
@@ -97,8 +103,12 @@ header{
                     margin: 16px;
                 }
             }
+            .dropdown ul li a{
+                @include tipografiaMenu(12px, 300, black)
+            }
         }
     }
+
     .menu{
         background-color: white;
         padding: 16px;
@@ -391,7 +401,7 @@ footer{
 /* MEDIA QUERIES */
 
 @media (max-width:767px){
-    .slider, .logo, .menu, .navR, .sec3{
+    .slider, .logo, .menu, .fa-regular, .sec3{
         display: none;
     }
     body{
@@ -409,6 +419,10 @@ footer{
     }
     footer{
         height: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footerLeft{
         display: flex;
         flex-direction: column;
     }
@@ -474,6 +488,9 @@ footer{
 }
 @media (min-width: 768px){
     #homeSliderBanner2, .isotipoH, .sec3Movil{
+        display: none;
+    }
+    .dropdown{
         display: none;
     }
 }
