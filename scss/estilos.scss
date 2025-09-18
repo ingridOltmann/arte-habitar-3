@@ -338,13 +338,13 @@ footer{
     }
 }
 .mainContacto{
+    width: 100%;
     form{
         display: flex;
         flex-direction: column;
         align-items: center;
         div{
             @include flexBasico(flex, center, center);
-            width: 50%;
             label{
             font-size: 12px;
             font-family: $tipografia-ppal;
@@ -354,6 +354,10 @@ footer{
             input{
                 height: 30px;
                 width: 80%;
+                padding-left: 16px;
+                font-family: $tipografia-ppal;
+                color: $color-info;
+                font-size: 12px;
                 @include bordeCard(solid, 1px, 15px);
                 border-color: $color-border-card;
             }
@@ -368,6 +372,14 @@ footer{
             @include bordeCard(solid, 1px, 15px);
             color: $color-info;
             border-color: $color-border-card;
+        }
+        button{
+            align-self: center;
+            margin: 8px;
+            color: white;
+            background-color: $color-info;
+            font-family: $tipografia-ppal;
+            font-size: 12px;
         }
     }
 }
@@ -439,6 +451,18 @@ footer{
     footer{
         height: 200px;
         @include flexBasico(column, space-around, center);
+        .footerLeft{
+            .menuF{
+                width: 100%;
+                ul{
+                    padding: 8px;
+                    li{
+                        width: 70px;
+                    }
+                }
+            }
+            
+        }
     }
     
     h1{
@@ -453,19 +477,18 @@ footer{
         width: 100%;
     }
     .home-medio{
-        display: flex;
-        flex-direction: column;
+        @include flexBasico(column, center, center);
         width: 100%;
+        .middleBanner{
+            width: 100%;
+            height: auto;
+        }
+        .middleBanner img{
+            width: auto;
+            height: 200px;
+        }
     }
-    .middleBanner{
-        width: 100%;
-        height: auto;
-        justify-content: center;
-    }
-    .middleBanner img{
-        width: auto;
-        height: 200px;
-    }
+    
     .sec3Movil a img{
         width: 100%;
     }
@@ -530,6 +553,20 @@ footer{
         color: $color-info;
     }
 }
+}
+.mainContacto{
+    width: 100%;
+    form{
+        width: 100%;
+        padding: 8px;
+        div{
+            width: 90%;
+        }
+        textarea{
+            width: 90%;
+            font-size: 12px;
+        }
+    }
 }
 @media (min-width: 768px){
     #homeSliderBanner2, .isotipoH, .sec3Movil{

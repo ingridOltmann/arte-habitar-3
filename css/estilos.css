@@ -327,6 +327,9 @@ footer .redes div a img {
   color: rgb(75, 113, 4);
 }
 
+.mainContacto {
+  width: 100%;
+}
 .mainContacto form {
   display: flex;
   flex-direction: column;
@@ -337,7 +340,6 @@ footer .redes div a img {
   flex-direction: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
 }
 .mainContacto form div label {
   font-size: 12px;
@@ -348,6 +350,10 @@ footer .redes div a img {
 .mainContacto form div input {
   height: 30px;
   width: 80%;
+  padding-left: 16px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(75, 113, 4);
+  font-size: 12px;
   border-style: solid;
   border-width: 1px;
   border-radius: 15px;
@@ -365,6 +371,14 @@ footer .redes div a img {
   border-radius: 15px;
   color: rgb(75, 113, 4);
   border-color: rgb(1, 86, 1);
+}
+.mainContacto form button {
+  align-self: center;
+  margin: 8px;
+  color: white;
+  background-color: rgb(75, 113, 4);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
 }
 
 .nosotros {
@@ -441,6 +455,15 @@ footer .redes div a img {
     justify-content: space-around;
     align-items: center;
   }
+  footer .footerLeft .menuF {
+    width: 100%;
+  }
+  footer .footerLeft .menuF ul {
+    padding: 8px;
+  }
+  footer .footerLeft .menuF ul li {
+    width: 70px;
+  }
   h1 {
     height: 25px;
     font-size: 16px;
@@ -455,14 +478,15 @@ footer .redes div a img {
   .home-medio {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
-  .middleBanner {
+  .home-medio .middleBanner {
     width: 100%;
     height: auto;
-    justify-content: center;
   }
-  .middleBanner img {
+  .home-medio .middleBanner img {
     width: auto;
     height: 200px;
   }
@@ -523,6 +547,21 @@ footer .redes div a img {
     color: rgb(75, 113, 4);
   }
 }
+.mainContacto {
+  width: 100%;
+}
+.mainContacto form {
+  width: 100%;
+  padding: 8px;
+}
+.mainContacto form div {
+  width: 90%;
+}
+.mainContacto form textarea {
+  width: 90%;
+  font-size: 12px;
+}
+
 @media (min-width: 768px) {
   #homeSliderBanner2, .isotipoH, .sec3Movil {
     display: none;
