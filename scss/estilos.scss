@@ -51,6 +51,7 @@ footer, .navTop{
     padding: 24px;
 }
 main{
+    margin-top: 24px;
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 32px;
@@ -372,21 +373,22 @@ footer{
 }
 .nosotros{
     @include flexBasico(column, center, center);
-    .laCreadora{  
-        @include flexBasico(row, center, center);  
-        img{
-            width: 30%;
+    div{
+        .fotoSobreMi{
+            width: 40%;
             height: auto;
-            padding: 24px;
+            img{
+                height: 400px;
+                width: auto;
+                padding: 24px;
+            }
         }
     }
+    .laCreadora{  
+        @include flexBasico(row, space-around, center);
+    }
     .elComienzo{   
-            @include flexBasico(row-reverse, center, center);
-        img{
-            width: 30%;
-            height: auto;
-            padding: 24px;
-        }
+        @include flexBasico(row-reverse, space-around, center);
     }
 }
 .info{
@@ -401,31 +403,44 @@ footer{
 /* MEDIA QUERIES */
 
 @media (max-width:767px){
-    .slider, .logo, .menu, .fa-regular, .sec3{
+    .slider, .menu, .fa-regular, .sec3, .isotipoF{
         display: none;
     }
     body{
         display: flex;
         flex-direction: column;
     }
+    main{
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 16px;
+        margin-top: 24px;
+    }
     header, main, footer{
         width: 100%;
     }
     .navBar{
         height: 100px;
+        .navTop{
+            .logo{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            a{
+                img{
+                    height: 60px;
+                    width: auto;
+                }
+            }
+        }
+        }
     }
-    .isotipoH a img{
-        height: 36px;
-    }
+    
     footer{
         height: 200px;
-        display: flex;
-        flex-direction: column;
+        @include flexBasico(column, space-around, center);
     }
-    .footerLeft{
-        display: flex;
-        flex-direction: column;
-    }
+    
     h1{
         height: 25px;
         font-size: 16px;
@@ -485,6 +500,36 @@ footer{
         "producto8"
         "producto9";        
     }
+    .nosotros{
+    @include flexBasico(column, center, center);
+    div{
+        .fotoSobreMi{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            img{
+                height: 300px;
+                width: auto;
+                padding: 24px;
+            }
+        }
+    }
+    .laCreadora{  
+        @include flexBasico(column, space-around, center);
+    }
+    .elComienzo{   
+        @include flexBasico(column, space-around, center);
+    }
+}
+.info{
+    width: 90%;
+    p{
+        font-size: 12px;
+        font-weight: 300px;
+        color: $color-info;
+    }
+}
 }
 @media (min-width: 768px){
     #homeSliderBanner2, .isotipoH, .sec3Movil{

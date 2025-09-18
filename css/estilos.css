@@ -25,6 +25,7 @@ footer, .navTop {
 }
 
 main {
+  margin-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 32px;
@@ -372,27 +373,26 @@ footer .redes div a img {
   justify-content: center;
   align-items: center;
 }
+.nosotros div .fotoSobreMi {
+  width: 40%;
+  height: auto;
+}
+.nosotros div .fotoSobreMi img {
+  height: 400px;
+  width: auto;
+  padding: 24px;
+}
 .nosotros .laCreadora {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
-.nosotros .laCreadora img {
-  width: 30%;
-  height: auto;
-  padding: 24px;
 }
 .nosotros .elComienzo {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
-.nosotros .elComienzo img {
-  width: 30%;
-  height: auto;
-  padding: 24px;
 }
 
 .info {
@@ -406,12 +406,18 @@ footer .redes div a img {
 
 /* MEDIA QUERIES */
 @media (max-width: 767px) {
-  .slider, .logo, .menu, .fa-regular, .sec3 {
+  .slider, .menu, .fa-regular, .sec3, .isotipoF {
     display: none;
   }
   body {
     display: flex;
     flex-direction: column;
+  }
+  main {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 16px;
+    margin-top: 24px;
   }
   header, main, footer {
     width: 100%;
@@ -419,17 +425,21 @@ footer .redes div a img {
   .navBar {
     height: 100px;
   }
-  .isotipoH a img {
-    height: 36px;
+  .navBar .navTop .logo {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .navBar .navTop .logo a img {
+    height: 60px;
+    width: auto;
   }
   footer {
     height: 200px;
     display: flex;
     flex-direction: column;
-  }
-  .footerLeft {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
   h1 {
     height: 25px;
@@ -474,6 +484,43 @@ footer .redes div a img {
     justify-content: center;
     display: grid;
     grid-template-areas: "producto1" "producto2" "producto3" "producto4" "producto5" "producto6" "producto7" "producto8" "producto9";
+  }
+  .nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nosotros div .fotoSobreMi {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .nosotros div .fotoSobreMi img {
+    height: 300px;
+    width: auto;
+    padding: 24px;
+  }
+  .nosotros .laCreadora {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nosotros .elComienzo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .info {
+    width: 90%;
+  }
+  .info p {
+    font-size: 12px;
+    font-weight: 300px;
+    color: rgb(75, 113, 4);
   }
 }
 @media (min-width: 768px) {
